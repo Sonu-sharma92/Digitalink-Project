@@ -13,7 +13,7 @@ pipeline {
          stage('build') {
             steps {
                sh 'docker build -t Digitalink .'
-               echo 'image is build'
+               echo 'image is build success'
 
           }
        
