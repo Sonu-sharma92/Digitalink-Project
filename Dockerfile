@@ -2,11 +2,11 @@ From node:latest as build
 
 WORKDIR /myapp
 
-COPY package*.json ./
+COPY package*.json /myapp
 
 RUN npm install
 
-COPY . .
+COPY . /myapp
 
 RUN npm run build
 
