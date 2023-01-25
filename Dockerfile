@@ -2,11 +2,13 @@ From node:latest as build
 
 WORKDIR /myapp
 
+COPY . /myapp
+
 RUN cd webapp && npm install
 
 RUN cd webapp && npm run build
 
-COPY . /myapp
+
 
 From nginx
 
