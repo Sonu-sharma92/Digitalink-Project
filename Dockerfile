@@ -2,8 +2,6 @@ From node:latest as build
 
 WORKDIR /myapp
 
-COPY /webapp/package.json /myapp
-
 RUN npm install
 
 RUN npm run build
