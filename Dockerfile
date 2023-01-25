@@ -2,7 +2,7 @@ From node:latest as build
 
 WORKDIR /myapp
 
-COPY . /myapp
+COPY package*.json ./
 
 RUN npm install
 
