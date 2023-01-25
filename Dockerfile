@@ -4,15 +4,19 @@ WORKDIR /myapp
 
 COPY . /myapp
 
-RUN cd webapp
+RUN npm install
 
-RUN npm install && npm run build
+COPY . .
+
+RUN npm run build
 
 From nginx
 
-Copy --from build /myapp/dist/* var/www/html
+Copy --from=build /myapp/dist /usr/share/nginx/html
 
 Expose 80
+
+CMD ["nginx", "-g", "daemon off"]
 
 
 
