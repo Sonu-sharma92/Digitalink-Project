@@ -6,9 +6,9 @@ COPY /webapp/package.json /myapp
 
 RUN npm install
 
-COPY . /myapp
-
 RUN npm run build
+
+COPY ./myapp
 
 From nginx
 
