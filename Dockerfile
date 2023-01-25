@@ -12,7 +12,7 @@ RUN cd webapp && npm run build
 
 From nginx
 
-Copy --from=build /myapp/webapp/dist/* /usr/share/nginx/html
+Copy --from=build /myapp/webapp/dist/ /usr/share/nginx/html/
 
 Expose 80
 
