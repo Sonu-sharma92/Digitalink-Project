@@ -12,7 +12,7 @@ pipeline {
         }
          stage('build') {
             steps {
-               sh 'docker build -t sonusharmadocker/digitalink .'
+               sh 'sudo ocker build -t sonusharmadocker/digitalink .'
                echo 'successfully created docker image'
 
           }
