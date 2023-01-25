@@ -2,9 +2,9 @@ From node:latest as build
 
 WORKDIR /myapp
 
-RUN npm install
+RUN cd webapp && npm install
 
-RUN npm run build
+RUN cd webapp && npm run build
 
 COPY . /myapp
 
