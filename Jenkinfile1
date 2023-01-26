@@ -10,7 +10,7 @@ pipeline {
 
     stage('Docker-build') {
             steps {
-                sh 'docker build -t Digitalink-frontend .' 
+                sh 'docker build -t frontend .' 
             }
         }
 
