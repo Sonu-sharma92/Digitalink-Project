@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git code') {
+            steps {
+                sh 'git branch: 'main', url: 'https://github.com/Sonu-sharma92/Digitalink-Project.git'
+            }
+        }
+
+    stage('Docker-build') {
+            steps {
+                sh 'docker build -t Digitalink-frontend .' 
+            }
+        }
+
+     
+    }
+}
