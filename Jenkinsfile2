@@ -2,10 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('git repo') {
+        stage('Git code') {
             steps {
-                sh 'git branch: 'main', url: 'https://github.com/Sonu-sharma92/Digitalink-Project.git''
+                git branch: 'main', url: 'https://github.com/Sonu-sharma92/digitalink-Project.git'
             }
         }
+
+    stage('Docker-backend build and run') {
+            steps {
+                sh 'docker build -f Dockerfile2 -t digitalink-backend .'
+
+                sh 'docker run -d -p 80:8080 digitalink-backend'
+            }
+        }
+
+
     }
 }
+
