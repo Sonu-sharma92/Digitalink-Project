@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Git code') {
             steps {
-                git branch: 'main', url: 'https://github.com/Sonu-sharma92/digitalink-Project.git'
+                 sh 'git branch: 'main', url: 'https://github.com/Sonu-sharma92/digitalink-Project.git''
+
             }
         }
 
