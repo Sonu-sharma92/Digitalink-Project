@@ -10,4 +10,4 @@ RUN cd backend && npx prisma db push && npm run build
 
 CMD [ "npm", "start","index.js" ]
 
-Expose 8080
+Expose 8090
