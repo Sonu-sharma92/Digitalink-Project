@@ -2,11 +2,11 @@ From node:latest
 
 WORKDIR /backend
 
-COPY . /backend && npm install
+COPY . /backend
 
-RUN cd /backend && npx prisma generate
+RUN cd api && npm install && npx prisma generate
 
-RUN cd /backend npm run build
+RUN cd api && npm run build
 
 CMD [ "npm", "start" ]
 
