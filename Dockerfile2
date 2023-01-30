@@ -1,15 +1,15 @@
-From node:latest as build
+From node:latest
 
 WORKDIR /backend
 
+RUN npm install
+
 COPY . /backend
 
-From postgres
+RUN npx prisma generate
 
-Copy --from=build /backend && npm install -g pm2
+RUN npm run build
 
-RUN cd /backend && npx prisma db push && npm run build
-
-CMD [ "npm", "start","index.js" ]
+CMD [ "npm", "start" ]
 
 Expose 8090
