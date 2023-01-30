@@ -2,9 +2,7 @@ From node:latest
 
 WORKDIR /backend
 
-RUN npm install
-
-COPY . /backend
+COPY . /backend && npm install
 
 RUN cd /backend && npx prisma generate
 
