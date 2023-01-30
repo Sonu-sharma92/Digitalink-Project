@@ -4,9 +4,9 @@ WORKDIR /backend
 
 COPY . /backend
 
-RUN cd backend && npm install -g pm2
+RUN cd /backend && npm install -g pm2
 
-RUN cd backend && npx prisma db push && npm run build
+RUN cd /backend && npx prisma db push && npm run build
 
 CMD [ "npm", "start","index.js" ]
 
