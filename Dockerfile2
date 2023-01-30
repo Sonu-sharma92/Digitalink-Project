@@ -4,6 +4,8 @@ WORKDIR /backend
 
 COPY . /backend
 
+From postgres
+
 RUN cd /backend && npm install -g pm2
 
 RUN cd /backend && npx prisma db push && npm run build
