@@ -8,6 +8,6 @@ RUN cd api && npm install && npx prisma generate
 
 RUN cd api && npm run build
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "start","-g","daemon off" ]
 
 Expose 8090
