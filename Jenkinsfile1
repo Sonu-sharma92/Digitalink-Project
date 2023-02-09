@@ -10,9 +10,9 @@ pipeline {
 
     stage('Docker-build and run') {
             steps {
-                sh 'docker build -f Dockerfile1 -t digitalink-frontend .' 
+                sh 'docker build -f Dockerfile1 -t digitalink-lmsfrontend .' 
                 
-                sh 'docker run -d -p 80:80 digitalink-frontend'
+                sh 'docker run -d -p 80:80 digitalink-lmsfrontend'
             }
         }
 
